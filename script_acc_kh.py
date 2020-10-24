@@ -69,14 +69,16 @@ Jnpr-IPv6-Delegated-Pool-Name: FTTH-V6-LAN-CGNAT"""
     sub_ipv4_static_input = ""
     ########Scrip main##########
     username = input("(Input) Username/UID: ")
-    pwd = input("(Input) Password(1 to user default 1a2b3c4d): ")
+    pwd = input("(Input) Password (Enter \"1\" to use default: \"1a2b3c4d\"): ")
     if pwd == "1":
         userPassword = userPassword_default
         print("==>(Info) Password default to: 1a2b3c4d")
     else:
         userPassword += pwd
-    print("===================================================")
     # goi cuoc
+    print("===================================================")
+    print("**                 List goi cuoc                 **")
+    print("===================================================")
     for x in list_goi_cuoc:
         print(f"{x}: {list_goi_cuoc[x]}")
     print("===================================================")
