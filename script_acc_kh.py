@@ -150,13 +150,13 @@ Jnpr-IPv6-Delegated-Pool-Name: FTTH-V6-LAN-CGNAT"""
         while loop == True:
             try:
                 Framed_Route_1 = ipaddress.ip_network(
-                    input("(Input) Block IP , subnetmask default /32: "))
+                    input("(Input) Block IP, subnetmask default /32: "))
                 if ipaddress.ip_network(Framed_Route_1).is_private == True:
                     loop = True
                     print(
                         "==> (Error) Dai dia chi ip la private, moi nhap lai dai dia chi public!")
                 else:
-                    loop = False
+                    break
             except ValueError:
                 print("==> (Error) Sai cu phap block ip! (ipaddress/subnetmask)")
         sub_ipv4_static_input = sub_ipv4_static_input + \
@@ -173,7 +173,7 @@ Jnpr-IPv6-Delegated-Pool-Name: FTTH-V6-LAN-CGNAT"""
                     print(
                         "==> (Error) Dai dia chi ip la private, moi nhap lai dai dia chi public!")
                 else:
-                    loop = False
+                    break
             except ValueError:
                 print("==> (Error) Sai cu phap block ip! (ipaddress/subnetmask)")
         sub_ipv4_static_input = sub_ipv4_static_input + \
@@ -216,14 +216,14 @@ Jnpr-IPv6-Delegated-Pool-Name: FTTH-V6-LAN-CGNAT"""
     ldif += "\n\n"
     print(f"==>(Info) Add user <{username}> to ldif file!")
     add_user = input(
-        "\n==>(Input) Them khach hang? (choose y for yes, any other keys for no): ")
+        "\n==>(Input) Them khach hang? (Enter "y" for yes, any other keys for no): ")
 ##Debug###
 # print(sub_ipv4_static_input)
 
 ##########################LDIF OUTPUT#########################################################
 ldif = ldif.rstrip()
 ldif = ldif.lstrip()
-print("================================================================================\n")
+print("================================================================================")
 print(""" .----------------.  .----------------.  .----------------.  .----------------. 
 | .--------------. || .--------------. || .--------------. || .--------------. |
 | |   _____      | || |  ________    | || |     _____    | || |  _________   | |
