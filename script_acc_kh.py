@@ -216,7 +216,7 @@ Jnpr-IPv6-Delegated-Pool-Name: FTTH-V6-LAN-CGNAT"""
     ldif += "\n\n"
     print(f"==>(Info) Add user <{username}> to ldif file!")
     add_user = input(
-        "\n==>(Input) Them khach hang? (Enter "y" for yes, any other keys for no): ")
+        "\n==>(Input) Them khach hang? (Enter \"y\" for yes, any other keys for no): ")
 ##Debug###
 # print(sub_ipv4_static_input)
 
